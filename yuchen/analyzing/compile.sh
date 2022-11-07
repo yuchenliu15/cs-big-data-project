@@ -8,7 +8,7 @@ jar -cvf "${1}.jar" *.class
 
 
 
-hadoop jar "${1}.jar" $1 resale-flat-prices-based-on-approval-date-2000-feb-2012.csv  ${1}/output
+hadoop jar "${1}.jar" $1 p7/cleaning/output/part-r-00000  ${1}/output
 
 
 
