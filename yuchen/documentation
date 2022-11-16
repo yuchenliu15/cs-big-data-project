@@ -1,4 +1,0 @@
-1) Cleaned data to filter out column names. This way we can treat every row as int or double.
-2) Added new calculated column (price per square meter). This is calculated from 2 other columns price and area of the apartment.
-
-
