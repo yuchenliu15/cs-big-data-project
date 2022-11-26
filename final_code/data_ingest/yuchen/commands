@@ -1,0 +1,11 @@
+Steps to retrieve data:
+
+1) Download data to local computer from: https://data.gov.sg/dataset/resale-flat-prices
+
+2) Use command: unzip resale-flat-prices.zip
+
+3) Use command: scp ~/Downloads/resale-flat-prices-based-on-approval-date-2000-feb-2012.csv yl6448@peel.hpc.nyu.edu:/home/yl6448
+
+4) Use command: yuchen]$ hdfs dfs -put resale-flat-prices-based-on-approval-date-2000-feb-2012.csv ./ 
+
+
