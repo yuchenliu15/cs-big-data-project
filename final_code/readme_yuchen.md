@@ -31,10 +31,10 @@
 
 - Second analyze directory peel: /home/yl6448/project/final_code/ana_code/yuchen/analyze2
   - java and jar files: 
-    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/Group.jar 
-    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/Group.java
-    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/GroupMapper.java
-    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/GroupReducer.java
+    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/Aggregate.jar 
+    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/Aggregate.java
+    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/AggregateMapper.java
+    - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/AggregateReducer.java
 
 
 ## Steps to run jobs
@@ -61,4 +61,12 @@
     - cd /home/yl6448/project/final_code/ana_code/yuchen/analyze2
     - sh compile.sh Group
   - output path in hdfs:
-    - Group/output/part-r-00000
+    - Aggregate/output/part-r-00000
+- Third analyze takes (Aggregate/output/part-r-00000) as input:
+  - steps are commands in screenshots in /screenshots/yuchen/analyze3
+    - move house_price into table in hive
+    - move ethnicity into table in hive
+    - join house_price and ethnicity on region
+    - output is in screenshots
+  - goal: use house_price (countains housing price average of each region) to map to ethnicity (contains ethnicity percentage of each region). Therefore, we can analyze the ethnicity distribution based on housing price in each region.
+
