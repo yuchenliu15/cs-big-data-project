@@ -11,6 +11,8 @@
     - /home/yl6448/project/final_code/etl_code/yuchen/Clean.java
     - /home/yl6448/project/final_code/etl_code/yuchen/CleanMapper.java
     - /home/yl6448/project/final_code/etl_code/yuchen/CleanReducer.java
+  - output on brightspace:
+    - data_output/yuchen/cleaning_output
 
 
 - Profiling directory peel: /home/yl6448/project/final_code/profiling_code/yuchen
@@ -19,6 +21,9 @@
     - /home/yl6448/project/final_code/profiling_code/yuchen/CountRecs.java
     - /home/yl6448/project/final_code/profiling_code/yuchen/CountRecsMapper.java
     - /home/yl6448/project/final_code/profiling_code/yuchen/CountRecsReducer.java
+  - output on brightspace:
+    - data_output/yuchen/profiling_output
+
 
 
 - First analyze directory peel: /home/yl6448/project/final_code/ana_code/yuchen
@@ -27,6 +32,9 @@
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze1/Ana.java
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze1/AnaMapper.java
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze1/AnaReducer.java
+    - output on brightspace:
+      - data_output/yuchen/analyze1_output
+
 
 
 - Second analyze directory peel: /home/yl6448/project/final_code/ana_code/yuchen/analyze2
@@ -35,6 +43,9 @@
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/Aggregate.java
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/AggregateMapper.java
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/AggregateReducer.java
+  - output on brightspace:
+    - data_output/yuchen/analyze2_output
+
 
 - Third analyze:
   - hive tables:
