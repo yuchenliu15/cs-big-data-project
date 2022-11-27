@@ -7,7 +7,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.util.HashSet;
 import java.util.Arrays;
 
-public class CountLinesMapper 
+
+public class CountAreasMapper 
     extends Mapper<LongWritable, Text, Text, IntWritable> {
 
   @Override
@@ -15,8 +16,8 @@ public class CountLinesMapper
       throws IOException, InterruptedException {
       String line = value.toString();
       String line_arr[] = line.split(",");
-      if(!line_arr[1].equals("planning_area")){
-        String area = line_arr[1];
+      if(!line_arr[0].equals("planning_area")){
+        String area = line_arr[0];
         context.write(new Text("Number of records for " + area),new IntWritable(1));
       }
 
