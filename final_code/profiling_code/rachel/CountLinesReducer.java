@@ -11,7 +11,7 @@ public class CountLinesReducer
   public void reduce(Text key, Iterable<IntWritable> values, Context context)
       throws IOException, InterruptedException {
     
-    int line = 0;
+    int lines = 0;
     for (IntWritable value : values) {
       lines += value.get();
     }
