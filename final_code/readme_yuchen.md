@@ -36,6 +36,10 @@
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/AggregateMapper.java
     - /home/yl6448/project/final_code/ana_code/yuchen/analyze2/AggregateReducer.java
 
+- Third analyze:
+  - hive tables:
+    - yl6448/house_price
+    - yl6448/ethnicity
 
 ## Steps to run jobs
 - Cleaning:
@@ -64,9 +68,12 @@
     - Aggregate/output/part-r-00000
 - Third analyze takes (Aggregate/output/part-r-00000) as input:
   - steps are commands in screenshots in /screenshots/yuchen/analyze3
-    - move house_price into table in hive
+    - move analyze2 data into table house_price in hive
+      - load data inpath 'hdfs://horton.hpc.nyu.edu:8020/user/yl6448/Aggregate/output/part-r-00000' overwrite into table house_price;
     - move ethnicity into table in hive
+      - load data inpath 'hdfs://horton.hpc.nyu.edu:8020/user/yl6448/clean_ethnicity' overwrite into table ethnicity;
     - join house_price and ethnicity on region
+      - select * from ethnicity inner join house_price on ethnicity.region = house_price.region where ethnicity.year=2000;
     - output is in screenshots
   - goal: use house_price (countains housing price average of each region) to map to ethnicity (contains ethnicity percentage of each region). Therefore, we can analyze the ethnicity distribution based on housing price in each region.
 
