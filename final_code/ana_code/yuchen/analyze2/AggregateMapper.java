@@ -16,10 +16,11 @@ public class AggregateMapper
       throws IOException, InterruptedException {
     String line = value.toString();
     String[] tokens = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
-     
+    
+    try{
+ 
     String location = tokens[0];
     String perPrice = tokens[4].trim();
-    try{
         context.write(new Text(location), new DoubleWritable(Double.parseDouble(perPrice)));
     } catch(Exception e) {
         throw e; 

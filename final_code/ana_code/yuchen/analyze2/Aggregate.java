@@ -5,6 +5,8 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.conf.*;
+
 
 public class Aggregate{
 
@@ -13,11 +15,14 @@ public class Aggregate{
       System.err.println("Usage: Clean <input path> <output path>");
       System.exit(-1);
     }
-    
-    Job job = new Job();
+ 
+      Configuration conf = new Configuration();
+            conf.set("mapreduce.output.textoutputformat.separator", ",");
+
+   
+    Job job = Job.getInstance(conf, "custom");
     job.setJarByClass(Aggregate.class);
     job.setJobName("Aggregate records");
-
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
     job.setNumReduceTasks(1); 
