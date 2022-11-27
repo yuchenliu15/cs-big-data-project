@@ -8,7 +8,7 @@ jar -cvf "${1}.jar" *.class
 
 
 
-hadoop jar "${1}.jar" $1 clean_ethnicity_output/clean_ethnicity  ${1}/output
+hadoop jar "${1}.jar" $1 project/cleanOutputEthnicity/part-r-00000  ${1}/output
 
 
 
