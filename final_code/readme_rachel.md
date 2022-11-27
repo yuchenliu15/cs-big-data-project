@@ -32,19 +32,26 @@
 - Profiling:
   - steps
     - cd /home/rmk461/project/final_code/profiling_code/rachel
-    - sh compile.sh CountAreas
-    - sh compile.sh CountLines
+    - sh compile.sh CountAreas Languages 
+    - sh compile.sh CountAreas Religions
+    - sh compile.sh CountAreas Ethnicity
+    - sh compile.sh CountLines Languages 
+    - sh compile.sh CountLines Religions
+    - sh compile.sh CountLines Ethnicity
   - output path in hdfs:
-    - CountLines/output/part-r-00000
-    - CountAreas/output/part-r-00000
+    - CountLines/Languages/output/part-r-00000
+    - CountLines/Religions/output/part-r-00000
+    - CountLines/Ethnicity/output/part-r-00000
+    - CountAreas/Languages/output/part-r-00000
+    - CountAreas/Religions/output/part-r-00000
+    - CountAreas/Ethnicity/output/part-r-00000
 - Analyse
   - steps
     - cd /home/rmk461/project/final_code/ana_code/rachel
-    - sh compile.sh Percent 
+    - sh compile.sh Percent Languages 
+    - sh compile.sh Percent Religions
+    - sh compile.sh Percent Ethnicity 
   - output path in hdfs:
-    - Percent/output/part-r-00000
-- NOTE:
-  - For Profiling and Analyse code, if we want to run jobs on other cleaned datasets, compile.sh must be modified. Input file can be: 
-    - project/cleanOutputEthnicity/part-r-00000
-    - project/cleanOutputLanguages/part-r-00000
-    - project/cleanOutputReligions/part-r-00000
+    - Percent/Languages/output/part-r-00000
+    - Percent/Religions/output/part-r-00000
+    - Percent/Ethnicity/output/part-r-00000
