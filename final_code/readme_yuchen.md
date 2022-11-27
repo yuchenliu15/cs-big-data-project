@@ -1,9 +1,11 @@
 # Instructions for Yuchen's data set
 
 ## Directory structures
+- Final project directory on Peel:
+  - /home/yl6448/project/final_code
+
 - Input file path on hdfs:
   - /user/yl6448/resale-flat-prices-based-on-approval-date-2000-feb-2012.csv
-
 
 - Cleaning directory on peel: /home/yl6448/project/final_code/etl_code/yuchen
   - java and jar files: 
